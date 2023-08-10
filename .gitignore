@@ -1,0 +1,7 @@
+*.o
+*.so
+*.a
+libft-combined-tester.sh
+libft-unit-test
+libft-war-machine
+libftTester
