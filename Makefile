@@ -3,9 +3,10 @@ SRCDIR := src
 OBJDIR := obj
 INCLUDES := includes
 
-SOURCES := $(shell find $(SRCDIR) -name 'ft_*.c')
-OBJECTS = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-CC := clang
+-include make/sources.mk
+OBJECTS := ${SOURCES:%.c=${OBJDIR}/%.o}
+
+CC := cc
 CFLAGS += -Wall -Wextra -Werror -O3
 RM := rm -rf
 AR := ar rcs
@@ -13,18 +14,23 @@ AR := ar rcs
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(AR) $(TARGET) $(OBJECTS)
+	@$(AR) $(TARGET) $(OBJECTS)
 
-$(OBJECTS): $(OBJDIR)/%.o: $(SRCDIR)/%.c
+$(OBJECTS): $(OBJDIR)/%.o: %.c
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
 clean:
-	$(RM) $(OBJDIR)
+	@$(RM) $(OBJDIR)
 
 fclean: clean
-	$(RM) $(TARGET)
+	@$(RM) $(TARGET)
+
+
+gmk:
+	@if [ -d make ];then echo ok;else mkdir make;fi
+	@find -name '*.c' -printf "%d%p\n" | sort -n | grep -v libft | grep -v mlx | sed 's/^[[:digit:]]/SOURCES += /' > make/sources.mk
 
 re: fclean all
 
-.PHONY: clean fclean re
+.PHONY: clean fclean gmk re
