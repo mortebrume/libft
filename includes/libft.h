@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2023/11/09 13:34:42 by aattali          ###   ########.fr       */
+/*   Updated: 2023/11/13 12:06:48 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_inset(char c, const char *set);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
