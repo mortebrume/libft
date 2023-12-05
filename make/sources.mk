@@ -17,6 +17,7 @@ SOURCES += ./src/lists/ft_lstiter.c
 SOURCES += ./src/lists/ft_lstlast.c
 SOURCES += ./src/lists/ft_lstmap.c
 SOURCES += ./src/lists/ft_lstnew.c
+SOURCES += ./src/lists/ft_lstprint.c
 SOURCES += ./src/lists/ft_lstsize.c
 SOURCES += ./src/mem/ft_bzero.c
 SOURCES += ./src/mem/ft_calloc.c
