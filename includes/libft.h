@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2023/12/05 15:34:06 by aattali          ###   ########.fr       */
+/*   Updated: 2023/12/06 15:31:26 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_issdigit(char const *s);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);

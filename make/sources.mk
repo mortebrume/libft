@@ -3,6 +3,7 @@ SOURCES += ./src/checker/ft_isalpha.c
 SOURCES += ./src/checker/ft_isascii.c
 SOURCES += ./src/checker/ft_isdigit.c
 SOURCES += ./src/checker/ft_isprint.c
+SOURCES += ./src/checker/ft_issdigit.c
 SOURCES += ./src/conv/ft_atoi.c
 SOURCES += ./src/conv/ft_atol.c
 SOURCES += ./src/conv/ft_itoa.c
