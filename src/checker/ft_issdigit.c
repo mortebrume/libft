@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 15:29:52 by aattali           #+#    #+#             */
-/*   Updated: 2023/12/06 15:31:10 by aattali          ###   ########.fr       */
+/*   Updated: 2023/12/07 10:43:59 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_issdigit(char const *s)
 
 	i = -1;
 	while (s[++i])
-		if (!ft_isdigit(s[i]))
+		if (!ft_isdigit(s[i]) && s[i] != '-')
 			return (0);
 	return (1);
 }
