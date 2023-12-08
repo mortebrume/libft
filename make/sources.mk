@@ -24,6 +24,7 @@ SOURCES += ./src/lists/ft_lstprint.c
 SOURCES += ./src/lists/ft_lstsize.c
 SOURCES += ./src/mem/ft_bzero.c
 SOURCES += ./src/mem/ft_calloc.c
+SOURCES += ./src/mem/ft_free_astr.c
 SOURCES += ./src/mem/ft_memchr.c
 SOURCES += ./src/mem/ft_memcmp.c
 SOURCES += ./src/mem/ft_memcpy.c
