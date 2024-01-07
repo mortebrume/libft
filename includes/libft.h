@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2024/01/07 20:42:11 by aattali          ###   ########.fr       */
+/*   Updated: 2024/01/07 22:21:37 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_lstsize(t_list *lst);
 int		ft_stralen(char **s);
+int		ft_putstr_fd(char *s, int fd);
 int		ft_printf(const char *s, ...);
+int		ft_dprintf(int fd, const char *s, ...);
 long	ft_atol(const char *nptr);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
@@ -60,7 +62,6 @@ t_list	*ft_lstgeti(t_list *lst, int i);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_free_astr(char **s);

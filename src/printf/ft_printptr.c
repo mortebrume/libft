@@ -6,7 +6,7 @@
 /*   By: andy <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:18:34 by andy              #+#    #+#             */
-/*   Updated: 2023/11/14 19:10:02 by andy             ###   ########.fr       */
+/*   Updated: 2024/01/07 22:17:22 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ int	ft_ptrlen(uintptr_t n)
 	return (len);
 }
 
-void	ft_putptr(uintptr_t ptr)
+void	ft_putptr(uintptr_t ptr, int fd)
 {
 	if (ptr >= 16)
 	{
-		ft_putptr(ptr / 16);
-		ft_putptr(ptr % 16);
+		ft_putptr(ptr / 16, fd);
+		ft_putptr(ptr % 16, fd);
 	}
 	else
 	{
 		if (ptr <= 9)
-			ft_putchar_fd(ptr + '0', 1);
+			ft_putchar_fd(ptr + '0', fd);
 		else
-			ft_putchar_fd(ptr - 10 + 'a', 1);
+			ft_putchar_fd(ptr - 10 + 'a', fd);
 	}
 }
 
@@ -47,14 +47,11 @@ void	ft_printptr(t_arg *arg)
 
 	ptr = (uintptr_t)va_arg(*arg->args, void *);
 	if (!ptr)
-	{
-		ft_putstr_fd("(nil)", 1);
-		arg->length += 5;
-	}
+		arg->length += ft_putstr_fd("(nil)", arg->fd);
 	else
 	{
-		arg->length += ft_putstr("0x");
-		ft_putptr(ptr);
+		arg->length += ft_putstr_fd("0x", arg->fd);
+		ft_putptr(ptr, arg->fd);
 		arg->length += ft_ptrlen(ptr);
 	}
 }

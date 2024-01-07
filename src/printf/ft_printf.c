@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:25:41 by aattali           #+#    #+#             */
-/*   Updated: 2023/11/15 10:28:58 by aattali          ###   ########.fr       */
+/*   Updated: 2024/01/07 22:21:15 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_printchar(t_arg *arg)
 	int	c;
 
 	c = va_arg(*arg->args, int);
-	ft_putchar_fd(c, 1);
+	ft_putchar_fd(c, arg->fd);
 	arg->length++;
 }
 
@@ -63,9 +63,28 @@ int	ft_parse(t_arg *arg, const char *s)
 			i++;
 		}
 		else
-			arg->length += write(1, &s[i], 1);
+			arg->length += write(arg->fd, &s[i], 1);
 	}
 	return (1);
+}
+
+int	ft_dprintf(int fd, const char *s, ...)
+{
+	va_list	args;
+	t_arg	*arg;
+	int		length;
+
+	arg = ft_calloc(1, sizeof(*arg));
+	if (!arg)
+		return (-1);
+	va_start(args, s);
+	arg->args = &args;
+	arg->fd = fd;
+	ft_parse(arg, s);
+	length = arg->length;
+	free(arg);
+	va_end(args);
+	return (length);
 }
 
 int	ft_printf(const char *s, ...)
@@ -79,6 +98,7 @@ int	ft_printf(const char *s, ...)
 		return (-1);
 	va_start(args, s);
 	arg->args = &args;
+	arg->fd = 1;
 	ft_parse(arg, s);
 	length = arg->length;
 	free(arg);
