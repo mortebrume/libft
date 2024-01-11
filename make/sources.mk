@@ -44,6 +44,7 @@ SOURCES += ./src/strings/ft_inset.c
 SOURCES += ./src/strings/ft_split.c
 SOURCES += ./src/strings/ft_stralen.c
 SOURCES += ./src/strings/ft_strchr.c
+SOURCES += ./src/strings/ft_strcmp.c
 SOURCES += ./src/strings/ft_strdup.c
 SOURCES += ./src/strings/ft_striteri.c
 SOURCES += ./src/strings/ft_strjoin.c
