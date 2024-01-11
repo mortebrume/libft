@@ -6,7 +6,7 @@
 /*   By: aattali <aattali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 14:56:23 by aattali           #+#    #+#             */
-/*   Updated: 2023/12/08 15:03:12 by aattali          ###   ########.fr       */
+/*   Updated: 2024/01/09 19:33:17 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 void	ft_free_astr(char **s)
 {
-	char	*ss;
+	size_t	i;
 
-	if (!s)
-		return ;
-	while (*s)
-	{
-		ss = *s;
-		s++;
-		free(ss);
-	}
-	*s = NULL;
+	i = 0;
+	while (s && s[i])
+		free(s[i++]);
+	free(s);
 }
