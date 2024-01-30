@@ -7,7 +7,7 @@ INCLUDES := includes
 OBJECTS := ${SOURCES:%.c=${OBJDIR}/%.o}
 
 CC := cc
-CFLAGS += -Wall -Wextra -Werror -O3
+CFLAGS += -Wall -Wextra -Werror
 RM := rm -rf
 AR := ar rcs
 
