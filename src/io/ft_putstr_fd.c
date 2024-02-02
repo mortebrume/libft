@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:24:37 by aattali           #+#    #+#             */
-/*   Updated: 2024/01/07 22:13:07 by aattali          ###   ########.fr       */
+/*   Updated: 2024/02/02 12:52:54 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ int	ft_putstr_fd(char *s, int fd)
 
 	if (!s)
 		return (0);
-	i = 0;
-	while (s[i])
-		write(fd, &s[i++], 1);
+	i = ft_strlen(s);
+	write(fd, s, i);
 	return (i);
 }
