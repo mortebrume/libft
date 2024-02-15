@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2024/02/02 14:30:35 by aattali          ###   ########.fr       */
+/*   Updated: 2024/02/15 09:07:22 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*get_next_line(int fd);
 char	*oget_next_line(int fd, char **line);
 char	**ft_split(char const *s, char c);
+char	**ft_stradup(char **arr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_issdigit(char const *s);
@@ -53,12 +54,12 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_lstsize(t_list *lst);
-int		ft_stralen(char **s);
 int		ft_putstr_fd(char *s, int fd);
 int		ft_printf(const char *s, ...);
 int		ft_dprintf(int fd, const char *s, ...);
 long	ft_atol(const char *nptr);
 size_t	ft_strlen(const char *s);
+size_t	ft_stralen(char **s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
 t_list	*ft_lstnew(void *content);

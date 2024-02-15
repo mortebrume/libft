@@ -6,15 +6,15 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 15:32:22 by aattali           #+#    #+#             */
-/*   Updated: 2023/12/05 15:33:46 by aattali          ###   ########.fr       */
+/*   Updated: 2024/02/15 09:08:34 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_stralen(char **s)
+size_t	ft_stralen(char **s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
