@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:24:46 by aattali           #+#    #+#             */
-/*   Updated: 2024/02/15 09:07:23 by aattali          ###   ########.fr       */
+/*   Updated: 2024/02/15 09:35:45 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 
 char	**ft_stradup(char **arr)
 {
-	char **dup;
+	char	**dup;
 	size_t	i;
 
 	dup = ft_calloc(ft_stralen(arr) + 1, sizeof(dup));
