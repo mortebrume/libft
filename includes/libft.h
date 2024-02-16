@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2024/02/15 09:07:22 by aattali          ###   ########.fr       */
+/*   Updated: 2024/02/16 09:46:52 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int		ft_min(int a, int b);
 int		ft_inset(char c, const char *set);
 int		ft_getinset(char c, const char *set);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strchrpos(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
