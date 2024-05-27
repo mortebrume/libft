@@ -29,6 +29,25 @@ char	*ft_strjoin3(const char *s1, const char *s2, const char *s3)
 	return (join);
 }
 
+char	*ft_strjoin2(char *s1, const char *s2)
+{
+	char	*join;
+	size_t	length;
+
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	length = ft_strlen(s1) + ft_strlen(s2) + 1;
+	join = ft_calloc(length, 1);
+	if (!join)
+		return (NULL);
+	ft_strlcat(join, s1, length);
+	ft_strlcat(join, s2, length);
+	free(s1);
+	return (join);
+}
+
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*join;

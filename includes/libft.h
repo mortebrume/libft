@@ -6,7 +6,7 @@
 /*   By: aattali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:34:39 by aattali           #+#    #+#             */
-/*   Updated: 2024/02/16 09:46:52 by aattali          ###   ########.fr       */
+/*   Updated: 2024/05/26 17:38:14 by aattali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin2(char *s1, const char *s2);
 char	*ft_strjoin3(const char *s1, const char *s2, const char *s3);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
@@ -52,6 +53,7 @@ int		ft_getinset(char c, const char *set);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strchrpos(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strrncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_lstsize(t_list *lst);
